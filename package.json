@@ -1,0 +1,34 @@
+{
+  "name": "gambit-chess",
+  "productName": "Gambit Chess",
+  "version": "1.0.0",
+  "description": "Local & LAN chess — Made by GuiltySun",
+  "author": "GuiltySun",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.guiltysun.gambit",
+    "productName": "Gambit Chess",
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "assets/**"
+    ]
+  },
+  "dependencies": {
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
